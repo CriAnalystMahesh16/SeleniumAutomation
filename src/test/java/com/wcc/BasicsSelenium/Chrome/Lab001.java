@@ -1,31 +1,29 @@
-package com.wcc.BasicsSelenium;
+package com.wcc.BasicsSelenium.Chrome;
 
 //import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Lab001 {
     public static void main(String[] args) {
         //WebDriver driver=new ChromeDriver();
 
-        ChromeDriver driver=new ChromeDriver();
-
-        EdgeDriver driver1=new EdgeDriver();
-
-        //FirefoxDriver driver2-new FirefoxDriver();
+        EdgeDriver driver = new EdgeDriver();
 
         driver.get("https://www.google.co.in/");
         driver.manage().window().maximize();
         System.out.println("Chrome  Browser Launched");
+        System.out.println("---------------------------------");
+        driver.navigate().to("https://www.instagram.com/");
+        driver.navigate().back();
+        System.out.println("Webpage backward");
+        System.out.println("---------------------------------");
 
-        driver1.get("https://www.amazon.in/");
-        driver1.manage().window().maximize();
-        System.out.println("Edge  Browser Launched");
+        driver.navigate().forward();
+        System.out.println("Webpage forward");
+        System.out.println("---------------------------------");
 
-
-
-
-        //driver.close();
+        driver.navigate().refresh();
+        System.out.println("Webpage refresh");
     }
 }

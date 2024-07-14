@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Assignment2 {
-//  Selenium Project#2 - Mini Project
+    //  Selenium Project#2 - Mini Project
 //open the url - https://katalon-demo-cura.herokuapp.com/
 //click on the make appoinment button
 //verify that url changes - assert
@@ -29,7 +29,7 @@ public class Assignment2 {
     }
     @Test
 
-    public void clickOnAppoinmentButton() throws InterruptedException {
+    public void clickOnAppoinmentButton(){
 
 
 
@@ -51,7 +51,6 @@ public class Assignment2 {
 
         WebElement loginButton =driver.findElement(By.id("btn-login"));
         loginButton.click();
-        Thread.sleep(3000);
         Assert.assertEquals(driver.getCurrentUrl(),"https://katalon-demo-cura.herokuapp.com/#appointment");
         System.out.println(driver.getTitle());
 
